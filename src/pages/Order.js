@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import {OrderJumbotron} from "../component/Jumbotron";
 import Footer from "../component/Footer";
 import {orderModal} from "../component/Modal";
-// import ramenImg from "../Images";
+import ramenImages from "../Images";
 import ImgCard from "../component/ImgCard";
 import OrderTable from "../component/OrderTable";
 
@@ -26,13 +26,14 @@ function Order(){
                  <h2 id="menuHeader">Menu</h2>
                  <OrderTable />
                         <div>
-                        
-                        {/* {ramenImg.map((ramen) =>(
+                        <img src={require("../Images/ramen1.jpg")}
+                        alt="ramen" />
+                        {/* {ramenImages.map((ramen) =>(
                             <ImgCard
                                 key={ramen.id}
                                 id={ramen.id}
                                 name={ramen.name}
-                                image={ramen.image}
+                                image={require(ramen.image)}
                             />
                         ))} */}
                         
