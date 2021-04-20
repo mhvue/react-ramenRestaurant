@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/mhvue/react-ramenRestaurant/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/mhvue/react-ramenRestaurant/static/js/main.2b20d6af.chunk.js",
+    "main.js.map": "/mhvue/react-ramenRestaurant/static/js/main.2b20d6af.chunk.js.map",
+    "runtime-main.js": "/mhvue/react-ramenRestaurant/static/js/runtime-main.25f084f6.js",
+    "runtime-main.js.map": "/mhvue/react-ramenRestaurant/static/js/runtime-main.25f084f6.js.map",
+    "static/js/2.eac1b52a.chunk.js": "/mhvue/react-ramenRestaurant/static/js/2.eac1b52a.chunk.js",
+    "static/js/2.eac1b52a.chunk.js.map": "/mhvue/react-ramenRestaurant/static/js/2.eac1b52a.chunk.js.map",
+    "static/js/3.76b00739.chunk.js": "/mhvue/react-ramenRestaurant/static/js/3.76b00739.chunk.js",
+    "static/js/3.76b00739.chunk.js.map": "/mhvue/react-ramenRestaurant/static/js/3.76b00739.chunk.js.map",
+    "index.html": "/mhvue/react-ramenRestaurant/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/mhvue/react-ramenRestaurant/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.eac1b52a.chunk.js.LICENSE.txt": "/mhvue/react-ramenRestaurant/static/js/2.eac1b52a.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/mhvue/react-ramenRestaurant/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.25f084f6.js",
+    "static/js/2.eac1b52a.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.2b20d6af.chunk.js"
+  ]
+}
