@@ -11,31 +11,36 @@ const ramenImages = [
         "id": 1,
         "name": "ramenTest1",
         "description": "Delicious ramen",
-        "image": image1
+        "image": image1,
+        "cost": 12.99
     },
     {
         "id": 2,
         "name": "ramenTest2",
         "description": "Delicious ramen",
-        "image": image2
+        "image": image2,
+        "cost": 12.99
     },
     {
         "id": 3,
         "name": "ramenTest3",
         "description": "Delicious ramen",
-        "image": image3
+        "image": image3,
+        "cost": 12.99
     },
     {
         "id": 4,
         "name": "ramenTest4",
         "description": "Delicious ramen",
-        "image": image4
+        "image": image4,
+        "cost": 12.99
     },
     {
         "id": 5,
         "name": "ramenTest5",
         "description": "Delicious ramen",
-        "image": image5
+        "image": image5,
+        "cost": 12.99
     }
 ]
 
