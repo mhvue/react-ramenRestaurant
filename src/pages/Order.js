@@ -1,24 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {OrderJumbotron} from "../component/Jumbotron";
 import Footer from "../component/Footer";
 import {orderModal} from "../component/Modal";
-import ramenImages from "../Images";
-import ImgCard from "../component/ImgCard";
 import OrderTable from "../component/OrderTable";
-import Img from "../Images/ramen1.jpg";
 
 function Order(){
-    // img to go here
-    // const img = [{
-    //     ""
-    // }]
-    //useEffect to display photos
-    //[] 
-    useEffect(()=>{
-
-    },[])
-
-
     return(
         <div>
             <OrderJumbotron />
@@ -26,19 +12,6 @@ function Order(){
             <div class="container">
                  <h2 id="menuHeader">Menu</h2>
                  <OrderTable />
-                        <div>
-                        {/* <img src= {Img} 
-                        alt="ramen" /> */}
-                        {ramenImages.map((ramen) =>(
-                            <ImgCard
-                                key={ramen.id}
-                                id={ramen.id}
-                                name={ramen.name}
-                                image= {ramen.image}
-                            />
-                        ))}
-                        
-                        </div>
             </div>
             <Footer />
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
-
+import ImgCard from "./ImgCard";
+import ramenImages from "../Images";
 
 function OrderTable () {
 
@@ -17,11 +18,17 @@ function OrderTable () {
                                 <th scope="col" id="btnHere"></th>
                             </tr>
                         </thead>
-                        <tr id="dataRow1"></tr>
-                        <tr id="dataRow2"></tr>
-                        <tr id="dataRow3"></tr>
-                        <tr id="dataRow4"></tr>
-                        <tr id="dataRow5"></tr>
+                        {/* per tr, display an image  */}
+                            {ramenImages.map((ramen) =>(
+                                <tr>
+                                <ImgCard
+                                    key={ramen.id}
+                                    id={ramen.id}
+                                    name={ramen.name}
+                                    image= {ramen.image}
+                                />
+                                </tr>
+                            ))}
                     </table> 
             </div>
         </div>
