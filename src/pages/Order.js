@@ -5,6 +5,7 @@ import {orderModal} from "../component/Modal";
 import ramenImages from "../Images";
 import ImgCard from "../component/ImgCard";
 import OrderTable from "../component/OrderTable";
+import Img from "../Images/ramen1.jpg";
 
 function Order(){
     // img to go here
@@ -26,16 +27,16 @@ function Order(){
                  <h2 id="menuHeader">Menu</h2>
                  <OrderTable />
                         <div>
-                        <img src={require("../Images/ramen1.jpg")}
-                        alt="ramen" />
-                        {/* {ramenImages.map((ramen) =>(
+                        {/* <img src= {Img} 
+                        alt="ramen" /> */}
+                        {ramenImages.map((ramen) =>(
                             <ImgCard
                                 key={ramen.id}
                                 id={ramen.id}
                                 name={ramen.name}
-                                image={require(ramen.image)}
+                                image= {ramen.image}
                             />
-                        ))} */}
+                        ))}
                         
                         </div>
             </div>
