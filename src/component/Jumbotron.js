@@ -5,24 +5,24 @@ import "./style.css";
 
 export function HomeJumbotron() {
     return(
-        <div class="jumbotron jumbotron-home text-center">
+        <div className="jumbotron jumbotron-home text-center">
           <header>
             <Link to="/"><h1>Ramen Restaurant</h1></Link>
           </header>
-          <p class="lead">"But First...Ramen"</p>
-          <hr class="my-4"></hr>
+          <p className="lead">"But First...Ramen"</p>
+          <hr className="my-4"></hr>
         </div>
     )
   }
 
 export function OrderJumbotron() {
     return(
-        <div class="jumbotron jumbotron-order text-center">
+        <div className="jumbotron jumbotron-order text-center">
             <header>
               <Link to="/"><h1>Ramen Restaurant</h1></Link>
             </header>
-            <p class="lead2">"Ramen: 10% noodles, 90% love."</p>
-            <hr class="my-4"></hr>
+            <p className="lead2">"Ramen: 10% noodles, 90% love."</p>
+            <hr className="my-4"></hr>
         </div>
       )
 }

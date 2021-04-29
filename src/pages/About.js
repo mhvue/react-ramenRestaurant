@@ -1,6 +1,8 @@
 import React from "react";
 import {HomeJumbotron} from "../component/Jumbotron";
 import Footer from "../component/Footer";
+import ramenBowl from "../Images/ramenbowl.jpg"
+import "../component/style.css";
 
 function About (){
     return(
@@ -22,24 +24,24 @@ function About (){
             <br></br>
             <div className="container">
                 <div className="row">
-                  <div className="col-md-6">
-                    <img className="mainPic" src="./assets/images/ramenbowl.jpg" alt="ramen bowl" class="img-responsive"></img>
-                 </div>
+                    <div className="col-md-6">
+                        <img className="mainPic" src={ramenBowl} alt="ramen bowl" class="img-responsive"></img>
+                    </div>
 
-                <div className="col-md-6 infoContainer">
-                    <br></br>
-                    <h3 className="loveRamenHead">Why ramen?</h3>
-                        <div className="loveRamenContainer">
-                        n rutrum est eu iaculis cursus. Aliquam eget consectetur nisi.
-                        Sed egestas ex nec ante eleifend mattis. Suspendisse vitae imperdiet felis.
-                        Aliquam erat volutpat. Ut libero tortor, imperdiet eget mattis at, rhoncus id
-                        lacus. Vivamus et felis scelerisque, dictum ex vel, eleifend elit. Aliquam a
-                        euismod leo, nec tincidunt ante. Mauris semper tortor ac sem molestie, aliquet
-                        lobortis tellus molestie. Ut nec ipsum vitae leo lobortis tempus. Fusce ex diam,
-                        malesuada sed nisl id, fermentum fringilla ex. Donec scelerisque non ipsum sit
-                        amet pellentesque.
-                        </div>
-                </div>
+                    <div className="col-md-6 infoContainer">
+                        <br></br>
+                        <h3 className="loveRamenHead">Why ramen?</h3>
+                            <div className="loveRamenContainer">
+                                n rutrum est eu iaculis cursus. Aliquam eget consectetur nisi.
+                                Sed egestas ex nec ante eleifend mattis. Suspendisse vitae imperdiet felis.
+                                Aliquam erat volutpat. Ut libero tortor, imperdiet eget mattis at, rhoncus id
+                                lacus. Vivamus et felis scelerisque, dictum ex vel, eleifend elit. Aliquam a
+                                euismod leo, nec tincidunt ante. Mauris semper tortor ac sem molestie, aliquet
+                                lobortis tellus molestie. Ut nec ipsum vitae leo lobortis tempus. Fusce ex diam,
+                                malesuada sed nisl id, fermentum fringilla ex. Donec scelerisque non ipsum sit
+                                amet pellentesque.
+                            </div>
+                    </div>
                 </div>
             </div>
              <Footer />
