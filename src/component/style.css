@@ -5,8 +5,13 @@ footer{
     text-align: center;
 }
 
-.jumbotron {
+.jumbotron-home {
     background-image: url("../Images/city1.jpg");
+}
+
+.jumbotron-order{
+    background-image: url("../Images/ramenBackground.jpg");
+    background-size: 50%;
 }
 
 img{

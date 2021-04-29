@@ -5,7 +5,7 @@ import "./style.css";
 
 export function HomeJumbotron() {
     return(
-        <div class="jumbotron text-center">
+        <div class="jumbotron jumbotron-home text-center">
           <header>
             <Link to="/"><h1>Ramen Restaurant</h1></Link>
           </header>
@@ -17,7 +17,7 @@ export function HomeJumbotron() {
 
 export function OrderJumbotron() {
     return(
-        <div class="jumbotron">
+        <div class="jumbotron jumbotron-order text-center">
             <header>
               <Link to="/"><h1>Ramen Restaurant</h1></Link>
             </header>
