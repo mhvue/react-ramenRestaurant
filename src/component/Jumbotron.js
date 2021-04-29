@@ -1,9 +1,11 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import "./style.css";
+
 
 export function HomeJumbotron() {
     return(
-        <div class="jumbotron">
+        <div class="jumbotron text-center">
           <header>
             <Link to="/"><h1>Ramen Restaurant</h1></Link>
           </header>

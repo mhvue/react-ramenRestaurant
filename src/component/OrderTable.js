@@ -5,7 +5,6 @@ import ramenImages from "../Images";
 function OrderTable () {
 
     return(
-        
         <div class="row">
             <div class="col-md-12">
                     <table class="table table-sm table-hover menuTable">
@@ -21,7 +20,6 @@ function OrderTable () {
                         </thead>
                         {/* per tr, display an image  */}
                             {ramenImages.map((ramen) =>(
-                                
                                 <tr>
                                     <td>
                                         <p>{ramen.id}</p>
@@ -31,7 +29,6 @@ function OrderTable () {
                                             key={ramen.id}
                                             id={ramen.id}
                                             name={ramen.name}
-                        
                                         />
                                     </td>
                                     <td>
