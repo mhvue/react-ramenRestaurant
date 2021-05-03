@@ -11,8 +11,8 @@ export function ContactModal() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+      <Button  variant="btn btn-outline-success"  onClick={handleShow}>
+        Contact
       </Button>
 
       <Modal show={show} onHide={handleClose} animation={false}>
@@ -34,18 +34,7 @@ export function ContactModal() {
       </Modal>
     </>
   );
-}
-
-
-// export function ContactModal(){
-//     return(
-//         //want this to be a modal. this a draft 
-//         <div className="contactInfo">
-//           <p>Call us: 123-456-6789</p>
-//           <p>Email us:Email@email.com</p>
-//         </div>
-//     )
-// }
+};
 
 // //navbar is working to get here 
 export function orderModal(){
@@ -56,4 +45,4 @@ export function orderModal(){
         <p>Order to go here</p>
       </div>
   )
-}
+};
