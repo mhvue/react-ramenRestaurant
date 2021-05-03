@@ -11,9 +11,7 @@ function App() {
       <div>
         <NavBar />
         <Route exact path = "/" component={About} />
-        {/* <Route exact path = "/Contact" component={ContactModal} /> */}
         <Route exact path = "/Order" component={Order} />
-        {/* <Route exact path = "/orderModal" component={OrderModal} /> */}
       </div>
     </Router>
   );

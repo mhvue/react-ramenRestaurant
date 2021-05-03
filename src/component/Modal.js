@@ -1,8 +1,8 @@
 import {React,useState} from "react";
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
-
+//contact Modal with contact information 
 export function ContactModal() {
   const [show, setShow] = useState(false);
 
@@ -36,7 +36,7 @@ export function ContactModal() {
   );
 };
 
-
+//view cart Modal with order information -props will have to be passed here 
 export function OrderModal() {
   const [show, setShow] = useState(false);
 
@@ -68,14 +68,3 @@ export function OrderModal() {
     </>
   );
 };
-
-// //navbar is working to get here 
-// export function orderModal(){
-//   return(
-//       //want this to be a modal. this a draft 
-//       <div className="orderInfo">
-//         <p>Here is your order:</p>
-//         <p>Order to go here</p>
-//       </div>
-//   )
-// };

@@ -1,18 +1,22 @@
 import {React, useState}  from "react";
 import {OrderJumbotron} from "../component/Jumbotron";
 import Footer from "../component/Footer";
-import {orderModal} from "../component/Modal";
+import {OrderModal} from "../component/Modal";
 import {ImgCard, ImgName} from "../component/ImgCard";
 import ramenImages from "../Images";
 
 function Order(){
     //state here for intital cost of order 
-    const [initalCost, setCost] = useState(0)
+    const [initalCost, setCost] = useState(0);
+    const [orderPage, setPage] = useState({data:""});
+
+    const togglePage = () => {
+        setPage({data: <OrderModal />});
+    }
 
     return(
         <div>
             <OrderJumbotron />
-            <orderModal />
             <div class="container">
                  <h2 id="menuHeader">Menu</h2>
                     <div className="row">
@@ -56,7 +60,7 @@ function Order(){
                                        {ramen.cost}
                                    </td>
                                    <td>
-                                   <button type="button" className="btn btn-info">Order</button>
+                                   <button type="button" onClick={togglePage}className="btn btn-info">Order</button>
                                    </td>
                                 </tr>
                             ))}
