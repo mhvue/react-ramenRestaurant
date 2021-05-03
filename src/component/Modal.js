@@ -36,13 +36,46 @@ export function ContactModal() {
   );
 };
 
-// //navbar is working to get here 
-export function orderModal(){
-  return(
-      //want this to be a modal. this a draft 
-      <div className="orderInfo">
-        <p>Here is your order:</p>
-        <p>Order to go here</p>
-      </div>
-  )
+
+export function OrderModal() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>
+      <Button  variant="btn btn-outline-success"  onClick={handleShow}>
+        View Cart
+      </Button>
+
+      <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Contact Info</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+              <p>Order To Go Here</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
 };
+
+// //navbar is working to get here 
+// export function orderModal(){
+//   return(
+//       //want this to be a modal. this a draft 
+//       <div className="orderInfo">
+//         <p>Here is your order:</p>
+//         <p>Order to go here</p>
+//       </div>
+//   )
+// };
