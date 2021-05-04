@@ -8,16 +8,16 @@ import ramenImages from "../Images";
 function Order(){
     //state here for intital cost of order 
     const [initalCost, setCost] = useState(0);
-    const [orderPage, setPage] = useState({data:""});
+    const [state, setState] = useState("notClick");
 
     const togglePage = () => {
-        setPage({data: <OrderModal />});
+        setState("clicked");
     }
 
     return(
         <div>
             <OrderJumbotron />
-            <div class="container">
+            <div className="container">
                  <h2 id="menuHeader">Menu</h2>
                     <div className="row">
                         <div className="col-md-12">
@@ -32,6 +32,7 @@ function Order(){
                                     <th scope="col" id="btnHere"></th>
                                 </tr>
                             </thead>
+                            <tbody>
                         {/* /* per tr, display an image, item#, price and description  */}
                             {ramenImages.map((ramen) =>(
                                 <tr>
@@ -60,11 +61,13 @@ function Order(){
                                        {ramen.cost}
                                    </td>
                                    <td>
-                                   <button type="button" onClick={togglePage}className="btn btn-info">Order</button>
+                                   {state === "notClick" ? (<button type="button" onClick={togglePage}className="btn btn-info">Order</button>) :
+                                    (state === "clicked" &&  <OrderModal /> && <button type="button" className="btn btn-info">Order</button>
+                                    )}
                                    </td>
                                 </tr>
                             ))}
-
+                        </tbody>
                         </table> 
                      </div>
                 </div>
