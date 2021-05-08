@@ -1,18 +1,21 @@
 import {React, useState}  from "react";
 import {OrderJumbotron} from "../component/Jumbotron";
 import Footer from "../component/Footer";
-import {OrderModal} from "../component/Modal";
+import {OrderModal, ContactModal, ContentModal} from "../component/Modal";
 import {ImgCard, ImgName} from "../component/ImgCard";
 import ramenImages from "../Images";
+import Button from "react-bootstrap/Button";
 
 function Order(){
     //state here for intital cost of order 
     const [initalCost, setCost] = useState(0);
     const [state, setState] = useState("notClick");
 
-    const togglePage = () => {
+    const toggleState = () => {
         setState("clicked");
     }
+    console.log(state)
+
 
     return(
         <div>
@@ -61,9 +64,10 @@ function Order(){
                                        {ramen.cost}
                                    </td>
                                    <td>
-                                   {state === "notClick" ? (<button type="button" onClick={togglePage}className="btn btn-info">Order</button>) :
-                                    (state === "clicked" &&  <OrderModal /> && <button type="button" className="btn btn-info">Order</button>
+                                   {state === "notClick" ? (<button type="button" id={ramen.id} onClick={toggleState}className="btn btn-info">Order</button>) :
+                                    (state === "clicked" && <ContentModal />
                                     )}
+                
                                    </td>
                                 </tr>
                             ))}
