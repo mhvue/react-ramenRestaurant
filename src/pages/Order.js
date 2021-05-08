@@ -11,8 +11,9 @@ function Order(){
     const [initalCost, setCost] = useState(0);
     const [state, setState] = useState("notClick");
 
-    const toggleState = () => {
+    const toggleState = (e) => {
         setState("clicked");
+        console.log(e.target.nodeList)
     }
     console.log(state)
 
@@ -64,9 +65,15 @@ function Order(){
                                        {ramen.cost}
                                    </td>
                                    <td>
-                                   {state === "notClick" ? (<button type="button" id={ramen.id} onClick={toggleState}className="btn btn-info">Order</button>) :
+                                    {/* realized problem is that modal is opening 5x per td */}
+                                   <Button  id={ramen.id} variant="btn btn-outline-success" onClick={toggleState}>
+                                       {/* <ContentModal 
+                                       //pass the information of price to modal 
+                                       /> */}
+                                    Order  </Button>
+                                   {/* {state === "notClick" ? (null) :
                                     (state === "clicked" && <ContentModal />
-                                    )}
+                                    )} */}
                 
                                    </td>
                                 </tr>

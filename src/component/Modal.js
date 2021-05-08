@@ -15,7 +15,12 @@ export function ContactModal() {
         Contact
       </Button>
 
-      <Modal show={show} onHide={handleClose} animation={false}>
+      <Modal show={show} 
+        onHide={handleClose}
+        animation={false} 
+        styles={ { background: "#FFFF00" } }
+        >
+
         <Modal.Header closeButton>
           <Modal.Title>Contact Info</Modal.Title>
         </Modal.Header>
@@ -68,7 +73,7 @@ export function OrderModal() {
   );
 };
 
-export function ContentModal(){
+export function ContentModal(props){
   const [show, setShow] = useState(true);
   const handleClose = () => setShow(false);
 
