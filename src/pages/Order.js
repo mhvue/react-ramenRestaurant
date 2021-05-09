@@ -1,7 +1,8 @@
-import {React, useState}  from "react";
+import React, {useState,useRef}  from "react";
 import {OrderJumbotron} from "../component/Jumbotron";
 import Footer from "../component/Footer";
-import {OrderModal, ContactModal, ContentModal} from "../component/Modal";
+import {OrderModal, ContactModal} from "../component/Modal";
+import ContentModal from "../component/ContentModal";
 import {ImgCard, ImgName} from "../component/ImgCard";
 import ramenImages from "../Images";
 import Button from "react-bootstrap/Button";
@@ -10,10 +11,16 @@ function Order(){
     //state here for intital cost of order 
     const [initalCost, setCost] = useState(0);
     const [state, setState] = useState("notClick");
+    const getRef = useRef();
+    console.log(getRef)
+    //get the price using useRef
+    // console.log(parseFloat(getRef.current.childNodes[0].data))
+
+    console.log(initalCost)
 
     const toggleState = (e) => {
         setState("clicked");
-        console.log(e.target.nodeList)
+        // console.log(e.target)
     }
     console.log(state)
 
@@ -61,12 +68,18 @@ function Order(){
                                    <td>
                                        {ramen.description}
                                    </td>
-                                   <td>
+                                   <td ref={getRef}>
                                        {ramen.cost}
                                    </td>
                                    <td>
                                     {/* realized problem is that modal is opening 5x per td */}
-                                   <Button  id={ramen.id} variant="btn btn-outline-success" onClick={toggleState}>
+                                   <Button   
+                                        id={ramen.id} 
+                                        variant="btn btn-outline-success" 
+                                        onClick={toggleState} 
+                                        onClick={e => console.log(e)}
+                                        ref={getRef}
+                                        >
                                        {/* <ContentModal 
                                        //pass the information of price to modal 
                                        /> */}

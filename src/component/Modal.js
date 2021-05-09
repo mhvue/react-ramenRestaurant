@@ -1,6 +1,7 @@
 import {React,useState} from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import ContentModal from "./ContentModal";
 
 //contact Modal with contact information 
 export function ContactModal() {
@@ -18,7 +19,6 @@ export function ContactModal() {
       <Modal show={show} 
         onHide={handleClose}
         animation={false} 
-        styles={ { background: "#FFFF00" } }
         >
 
         <Modal.Header closeButton>
@@ -41,10 +41,12 @@ export function ContactModal() {
   );
 };
 
+
+
+
 //view cart Modal with order information -props will have to be passed here 
 export function OrderModal() {
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
@@ -53,48 +55,7 @@ export function OrderModal() {
         View Cart
       </Button>
 
-      <Modal show={show} onHide={handleClose} animation={false}>
-        <Modal.Header closeButton>
-          <Modal.Title>Contact Info</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-              <p>Order To Go Here</p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <ContentModal />
     </>
   );
-};
-
-export function ContentModal(props){
-  const [show, setShow] = useState(true);
-  const handleClose = () => setShow(false);
-
-  return(
-    <>
-    <Modal show={show} onHide={handleClose} animation={false}>
-      <Modal.Header closeButton>
-        <Modal.Title>Contact Info</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-            <p>Order To Go Here</p>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
-          Close
-        </Button>
-        <Button variant="primary" onClick={handleClose}>
-          Save Changes
-        </Button>
-      </Modal.Footer>
-    </Modal>
-  </>
-  )
 };
