@@ -1,7 +1,6 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 import {ContactModal,OrderModal} from "./Modal";
-
 
 function NavBar(){
     // our state is we are on the Home page

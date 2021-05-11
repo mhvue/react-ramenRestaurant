@@ -16,15 +16,11 @@ function Order(){
     //get the price using useRef
     // console.log(parseFloat(getRef.current.childNodes[0].data))
 
-    console.log(initalCost)
-
     const toggleState = (e) => {
         setState("clicked");
         // console.log(e.target)
     }
-    console.log(state)
-
-
+    // console.log(state)
     return(
         <div>
             <OrderJumbotron />
@@ -76,9 +72,7 @@ function Order(){
                                    <Button   
                                         id={ramen.id} 
                                         variant="btn btn-outline-success" 
-                                        onClick={toggleState} 
-                                        onClick={e => console.log(e)}
-                                        ref={getRef}
+                                        onClick={toggleState}
                                         >
                                        {/* <ContentModal 
                                        //pass the information of price to modal 
@@ -90,6 +84,7 @@ function Order(){
                 
                                    </td>
                                 </tr>
+                                
                             ))}
                         </tbody>
                         </table> 
