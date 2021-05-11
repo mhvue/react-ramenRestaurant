@@ -10,7 +10,7 @@ import Modal from "react-bootstrap/Modal";
       <>
       <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header closeButton>
-          <Modal.Title>Contact Info</Modal.Title>
+          <Modal.Title>Order Info</Modal.Title>
         </Modal.Header>
         <Modal.Body>
               <p>Order To Go Here</p>

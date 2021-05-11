@@ -14,7 +14,6 @@ function App() {
         <NavBar />
         <Route exact path = "/" component={About} />
         <Route exact path = "/Order" component={Order} />
-        <About />
       </div>
     </Router>
     
