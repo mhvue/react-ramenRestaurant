@@ -1,4 +1,4 @@
-import React, {useState,useRef}  from "react";
+import React, {useState}  from "react";
 import {OrderJumbotron} from "../component/Jumbotron";
 import Footer from "../component/Footer";
 import {OrderModal, ContactModal} from "../component/Modal";
@@ -11,10 +11,6 @@ function Order(){
     //state here for intital cost of order 
     const [initalCost, setCost] = useState(0);
     const [state, setState] = useState("notClick");
-    const getRef = useRef();
-    console.log(getRef)
-    //get the price using useRef
-    // console.log(parseFloat(getRef.current.childNodes[0].data))
 
     const toggleState = (e) => {
         setState("clicked");
@@ -64,9 +60,6 @@ function Order(){
                                    <td>
                                        {ramen.description}
                                    </td>
-                                   <td ref={getRef}>
-                                       {ramen.cost}
-                                   </td>
                                    <td>
                                     {/* realized problem is that modal is opening 5x per td */}
                                    <Button   
@@ -74,14 +67,10 @@ function Order(){
                                         variant="btn btn-outline-success" 
                                         onClick={toggleState}
                                         >
-                                       {/* <ContentModal 
-                                       //pass the information of price to modal 
-                                       /> */}
-                                    Order  </Button>
-                                   {/* {state === "notClick" ? (null) :
-                                    (state === "clicked" && <ContentModal />
-                                    )} */}
-                
+                                    {state === "notClick" ? (null) :
+                                    (state === "clicked" && <ContentModal cost ={ramen.cost} />
+                                    )}
+                                    {ramen.cost} </Button>
                                    </td>
                                 </tr>
                                 

@@ -16,10 +16,7 @@ export function ContactModal() {
         Contact
       </Button>
 
-      <Modal show={show} 
-        onHide={handleClose}
-        animation={false} 
-        >
+      <Modal show={show} onHide={handleClose} animation={false}>
 
         <Modal.Header closeButton>
           <Modal.Title>Contact Info</Modal.Title>
@@ -40,8 +37,6 @@ export function ContactModal() {
     </>
   );
 };
-
-
 
 
 //view cart Modal with order information -props will have to be passed here 

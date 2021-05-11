@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
  function ContentModal(props){
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(true); //by setting this as true, it will not work propery in nav bar for now 
     const handleClose = () => setShow(false);
   
     return(
@@ -14,6 +14,7 @@ import Modal from "react-bootstrap/Modal";
         </Modal.Header>
         <Modal.Body>
               <p>Order To Go Here</p>
+              <p>{props.cost}</p>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
