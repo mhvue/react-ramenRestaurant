@@ -60,20 +60,20 @@ function Order(){
                                        {ramen.description}
                                    </td>
                                    <td>
-                                    {/* realized problem is that modal is opening 5x per td */}
                                    <Button   
                                         id={ramen.id} 
                                         variant="btn btn-outline-success" 
                                         className ={currentState ? "notClicked" : "clicked"}
                                         onClick={toggleState}  >
-                                        {currentState === true ? <ContentModal cost ={ramen.cost} /> :
-                                        null}
                                      {ramen.cost} 
                                     </Button>
                                    </td>
+                                  
                                 </tr>
                                 
                             ))}
+                            {/* getting modal to pop up once */}
+                            {currentState === true ? <ContentModal/>:null}
                         </tbody>
                         </table> 
                      </div>
