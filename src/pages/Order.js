@@ -1,4 +1,4 @@
-import React, {useState}  from "react";
+import React, {useState,useRef, useEffect}  from "react";
 import {OrderJumbotron} from "../component/Jumbotron";
 import Footer from "../component/Footer";
 import {OrderModal, ContactModal} from "../component/Modal";
@@ -9,13 +9,17 @@ import Button from "react-bootstrap/Button";
 
 function Order(){
     //state here for intital cost of order 
-    const [initalCost, setCost] = useState(0);
+    const [cost, setCost] = useState(0);
     const [currentState, setState] = useState(false);
 
-    const toggleState = () => {
+
+    const toggleState = (e) => {
         setState(!currentState);
+        setCost(e.target.innerText);
     }
     console.log(currentState)
+
+
     return(
         <div>
             <OrderJumbotron />
@@ -64,7 +68,8 @@ function Order(){
                                         id={ramen.id} 
                                         variant="btn btn-outline-success" 
                                         className ={currentState ? "notClicked" : "clicked"}
-                                        onClick={toggleState}  >
+                                        onClick={toggleState} 
+                                           >
                                      {ramen.cost} 
                                     </Button>
                                    </td>
@@ -72,8 +77,8 @@ function Order(){
                                 </tr>
                                 
                             ))}
-                            {/* getting modal to pop up once */}
-                            {currentState === true ? <ContentModal/>:null}
+                            {/* getting modal to pop up once with price of item*/}
+                            {currentState === true ? <ContentModal cost={cost}/>:null}
                         </tbody>
                         </table> 
                      </div>
