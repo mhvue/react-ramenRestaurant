@@ -12,7 +12,7 @@ function Order(){
     const [initalCost, setCost] = useState(0);
     const [currentState, setState] = useState(false);
 
-    const toggleState = (e) => {
+    const toggleState = () => {
         setState(!currentState);
     }
     console.log(currentState)
@@ -65,9 +65,9 @@ function Order(){
                                         id={ramen.id} 
                                         variant="btn btn-outline-success" 
                                         className ={currentState ? "notClicked" : "clicked"}
-                                        onClick={toggleState} >
-                                     {/* // && <ContentModal cost ={ramen.cost} />
-                                    // // )}> */}
+                                        onClick={toggleState}  >
+                                        {currentState === true ? <ContentModal cost ={ramen.cost} /> :
+                                        null}
                                      {ramen.cost} 
                                     </Button>
                                    </td>
