@@ -10,13 +10,12 @@ import Button from "react-bootstrap/Button";
 function Order(){
     //state here for intital cost of order 
     const [initalCost, setCost] = useState(0);
-    const [state, setState] = useState("notClick");
+    const [currentState, setState] = useState(false);
 
     const toggleState = (e) => {
-        setState("clicked");
-        // console.log(e.target)
+        setState(!currentState);
     }
-    // console.log(state)
+    console.log(currentState)
     return(
         <div>
             <OrderJumbotron />
@@ -65,12 +64,12 @@ function Order(){
                                    <Button   
                                         id={ramen.id} 
                                         variant="btn btn-outline-success" 
-                                        onClick={toggleState}
-                                        >
-                                    {state === "notClick" ? (null) :
-                                    (state === "clicked" && <ContentModal cost ={ramen.cost} />
-                                    )}
-                                    {ramen.cost} </Button>
+                                        className ={currentState ? "notClicked" : "clicked"}
+                                        onClick={toggleState} >
+                                     {/* // && <ContentModal cost ={ramen.cost} />
+                                    // // )}> */}
+                                     {ramen.cost} 
+                                    </Button>
                                    </td>
                                 </tr>
                                 
