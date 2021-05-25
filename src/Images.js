@@ -19,14 +19,14 @@ const ramenImages = [
         "name": "ramenTest2",
         "description": "Suspendisse eu nisi hendrerit, commodo elit vel, pulvinar orci.",
         "image": image2,
-        "cost": 12.99
+        "cost": 13.99
     },
     {
         "id": 3,
         "name": "ramenTest3",
         "description": "Suspendisse eu nisi hendrerit, commodo elit vel, pulvinar orci.",
         "image": image3,
-        "cost": 12.99
+        "cost": 15.99
     },
     {
         "id": 4,
@@ -40,7 +40,7 @@ const ramenImages = [
         "name": "ramenTest5",
         "description": "Suspendisse eu nisi hendrerit, commodo elit vel, pulvinar orci.",
         "image": image5,
-        "cost": 12.99
+        "cost": 11.99
     }
 ]
 

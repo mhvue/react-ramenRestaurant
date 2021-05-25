@@ -3,8 +3,8 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
  function ContentModal(props){
-    const [show, setShow] = useState(true); //by setting this as true, it will not work propery in nav bar for now 
-    const handleClose = () => setShow(false);
+    const [show, setShow] = useState(false); //by setting this as true, it will not work propery in nav bar for now 
+    const handleClose = () => setShow(true);
   
     return(
       <>

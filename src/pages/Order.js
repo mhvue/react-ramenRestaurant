@@ -10,14 +10,17 @@ import Button from "react-bootstrap/Button";
 function Order(){
     //state here for intital cost of order 
     const [cost, setCost] = useState(0);
-    const [currentState, setState] = useState(false);
+    // const [currentState, setState] = useState(false);
 
-
-    const toggleState = (e) => {
-        setState(!currentState);
-        setCost(e.target.innerText);
+    //get the cost of menu item clicked on
+    const getCost = (e) => {
+        setCost(e.target.innerText)
     }
-    console.log(currentState)
+    //toggle btwn click to not clicked as className
+    // const toggleState = (e) => {
+    //      setState(!currentState);
+    // }
+     console.log(cost)
 
 
     return(
@@ -67,18 +70,18 @@ function Order(){
                                    <Button   
                                         id={ramen.id} 
                                         variant="btn btn-outline-success" 
-                                        className ={currentState ? "notClicked" : "clicked"}
-                                        onClick={toggleState} 
+                                        // className ={currentState ? "notClicked" : "clicked"}
+                                        onClick={getCost} 
                                            >
                                      {ramen.cost} 
                                     </Button>
                                    </td>
-                                  
-                                </tr>
+                                 </tr>
                                 
                             ))}
                             {/* getting modal to pop up once with price of item*/}
-                            {currentState === true ? <ContentModal cost={cost}/>:null}
+                            {/* {currentState === true ? <ContentModal cost={cost}/>:null} */}
+                            {<ContentModal cost={cost}/>}
                         </tbody>
                         </table> 
                      </div>
