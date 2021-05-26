@@ -49,7 +49,6 @@ export function OrderModal() {
       <Button  variant="btn btn-outline-success"  onClick={handleShow}>
         View Cart
       </Button>
-
       <ContentModal />
     </>
   );

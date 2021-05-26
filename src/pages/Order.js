@@ -11,16 +11,19 @@ function Order(){
     //state here for intital cost of order 
     const [cost, setCost] = useState(0);
     // const [currentState, setState] = useState(false);
+    const [show, setShow] = useState(true) //by setting this as true, it will not work propery in nav bar for now 
+    // const handleShow = () => setShow(true);
 
     //get the cost of menu item clicked on
     const getCost = (e) => {
-        setCost(e.target.innerText)
+        setCost(e.target.innerText);
+        setShow(true);
     }
     //toggle btwn click to not clicked as className
     // const toggleState = (e) => {
     //      setState(!currentState);
     // }
-     console.log(cost)
+     console.log(cost,show)
 
 
     return(
@@ -71,9 +74,9 @@ function Order(){
                                         id={ramen.id} 
                                         variant="btn btn-outline-success" 
                                         // className ={currentState ? "notClicked" : "clicked"}
-                                        onClick={getCost} 
+                                        onClick={getCost}
                                            >
-                                     {ramen.cost} 
+                                        {ramen.cost}
                                     </Button>
                                    </td>
                                  </tr>
@@ -81,7 +84,11 @@ function Order(){
                             ))}
                             {/* getting modal to pop up once with price of item*/}
                             {/* {currentState === true ? <ContentModal cost={cost}/>:null} */}
-                            {<ContentModal cost={cost}/>}
+                            {setShow === true ? <OrderModal>
+                                <ContentModal 
+                                    cost={cost}/>
+                                    </OrderModal>
+                                :null}
                         </tbody>
                         </table> 
                      </div>
